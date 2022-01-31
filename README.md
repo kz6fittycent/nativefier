@@ -46,3 +46,7 @@ to learn about command-line flags usable to configure your app.
 
 To have high-quality icons used by default for an app/domain, please
 contribute to the [icon repository](https://github.com/nativefier/nativefier-icons).
+
+## More
+
+To learn more, visit: https://github.com/nativefier/nativefier 
