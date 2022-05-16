@@ -30,11 +30,11 @@ apps:
 parts: 
   nativefier:
     plugin: npm
-    npm-node-version: "16.13.2"    
+    npm-node-version: "18.1.0"    
     source: https://github.com/nativefier/nativefier.git
     source-type: git
     build-snaps:
-      - node/16/stable
+      - node/18/stable
       
     override-build: |
       npm install --include=dev
