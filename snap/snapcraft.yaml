@@ -20,7 +20,7 @@ assumes:
 
 layout:
   /usr/bin/wine:
-    bind: $SNAP/usr/bin/wine64-stable
+    bind: $SNAP/usr/bin/wine64
   
 apps:
   nativefier: 
