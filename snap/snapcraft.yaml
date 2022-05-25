@@ -17,6 +17,10 @@ architectures:
     
 assumes:
   - command-chain
+
+layout:
+  /usr/bin/wine64-stable
+  bind: $SNAP/usr/bin/wine64-stable
   
 apps:
   nativefier: 
