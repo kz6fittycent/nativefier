@@ -17,13 +17,22 @@ architectures:
     
 assumes:
   - command-chain
-
+  
+plugs:
+  wine-runtime:
+    interface: content
+    target: $SNAP/wine-runtime
+    default-provider: wine-platform-runtime
+  wine-6-stable:
+    interface: content
+    target: $SNAP/wine-platform
+    default-provider: wine-platform-6-stable
+    
 apps:
   nativefier: 
     command: bin/nativefier
     command-chain: 
-      - bin/homeishome-launch   
-      - bin/wine-platform-6-stable
+      - bin/homeishome-launch
     plugs:
       - network
       - home  
