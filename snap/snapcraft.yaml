@@ -18,15 +18,12 @@ architectures:
 assumes:
   - command-chain
 
-layout:
-  /usr/bin/wine:
-    bind: $SNAP/usr/bin/wine64
-  
 apps:
   nativefier: 
     command: bin/nativefier
     command-chain: 
-      - bin/homeishome-launch        
+      - bin/homeishome-launch   
+      - bin/wine-platform-6-stable
     plugs:
       - network
       - home  
@@ -49,8 +46,10 @@ parts:
       snapcraftctl set-version "$(git describe --tags | sed 's/^v//' | cut -d "-" -f1)"
     
     stage-packages:
-      - wine64
       - imagemagick
+      
+    stage-snaps:
+      - wine-platform-6-stable
       
   homeishome-launch:
     plugin: nil
