@@ -18,16 +18,6 @@ architectures:
 assumes:
   - command-chain
   
-plugs:
-  wine-runtime:
-    interface: content
-    target: $SNAP/wine-runtime
-    default-provider: wine-platform-runtime
-  wine-6-stable:
-    interface: content
-    target: $SNAP/wine-platform
-    default-provider: wine-platform-6-stable
-    
 apps:
   nativefier: 
     command: bin/nativefier
@@ -56,11 +46,7 @@ parts:
     
     stage-packages:
       - imagemagick
-      - wine64
-      
-    stage-snaps:
-      - wine-platform-6-stable
-      
+   
   homeishome-launch:
     plugin: nil
     stage-snaps:
